@@ -1,0 +1,12 @@
+Node.js - Event Loop
+
+Node.js utiliza eventos en gran medida y también es una de las razones por las Node.js es bastante rápido en comparación con otras tecnologías similares. Tan pronto como comienza su nodo servidor, simplemente inicia sus variables, declaró funciones y luego simplemente espera a que se produzca evento.
+En una aplicación orientada a eventos, en general hay un bucle principal que escucha los eventos, y luego dispara una función de devolución de llamada cuando se detecta uno de esos eventos.
+
+ 
+Mientras que los eventos parecen similares a lo que son las devoluciones de llamada. La diferencia radica en el hecho de que las funciones de devolución de llamada se llaman cuando una función asíncrona devuelve su resultado en el manejo de eventos como obras en el patrón de observador. Las funciones que escuchen a los eventos actúan como observadores. Siempre que un evento se activa, la función de detector se inicia la ejecución. Node.js tiene múltiples eventos disponibles incorporados a través de módulo de eventos y clase EventEmitter que se utiliza para enlazar eventos y los detectores de eventos de la siguiente manera:
+// Import events module
+var events = require('events');
+// Create an eventEmitter object
+var eventEmitter = new events.EventEmitter();
+
